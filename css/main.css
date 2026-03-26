@@ -1,0 +1,1231 @@
+/* ============================================================
+   MAIN STYLESHEET - The Mythos Cradle
+============================================================ */
+
+/* ===== CUSTOM FONT ========================================================== */
+@font-face {
+    font-family: 'MythologyOfEgypt';
+    src: url('../assets/fonts/mythology_of_egypt/Mythology Of Egypt.ttf') format('truetype'),
+         url('../assets/fonts/mythology_of_egypt/Mythology Of Egypt.otf') format('opentype');
+}
+
+:root {
+    --navy:   #002d68;   
+    --gold:   #e9ad1c;   
+    --cyan:   #15d5f5;   
+    --black:  #000000;
+    --white:  #ffffff;
+    --light-bg: #f5f5f5; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    background: var(--white);
+}
+
+/* ============================================================
+   NAVBAR 
+   ============================================================ */
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: transparent;
+    padding: 14px 20px;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 60px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+}
+
+/* Logo area */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 44px;
+    width: 44px;
+    object-fit: contain;
+}
+
+/* The "The Mythos Cradle" text next to the logo */
+.logo-text {
+    font-family: 'MythologyOfEgypt', serif;
+    font-size: 1rem;
+    color: var(--navy);
+    line-height: 1.2;
+    max-width: 130px;
+}
+
+/* The list of navigation links  */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    padding-bottom: 3px;
+    transition: color 0.2s; 
+}
+
+/* Highlight the current page link and add underline on hover */
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--cyan);
+    border-bottom: 2px solid var(--cyan);
+}
+
+/* Right side of navbar  */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Search bar styling  */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #cdd5e0;
+    border-radius: 24px;
+    padding: 7px 14px;
+    gap: 8px;
+    background: #f5f7fa;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    color: var(--navy);
+    width: 140px;    
+}
+
+
+.search-bar svg {
+    flex-shrink: 0;
+    display: block;
+}
+
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+}
+
+
+.cart-icon svg {
+    display: block;
+}
+
+
+.cart-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: var(--cyan);
+    color: var(--navy);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* ============================================================
+   HERO SECTION 
+   ============================================================ */
+
+
+.hero {
+    position: relative;         
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;               
+    display: block;
+}
+
+
+.hero-text {
+    position: absolute;         
+    bottom: 70px;
+    right: 70px;
+    text-align: right;
+}
+
+.hero-title {
+    font-family: 'MythologyOfEgypt', serif;
+    font-size: 4rem;            
+    color: var(--gold);
+    line-height: 1.15;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-tagline {
+    font-family: 'Metamorphous', serif;
+    font-size: 1.15rem;
+    color: var(--white);
+    margin-top: 10px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+.hero-sub {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero-sub img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+.hero-sub-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-family: 'MythologyOfEgypt', serif;
+    font-size: 3.2rem;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+}
+
+/* ============================================================
+   SHARED BUTTON STYLES
+   ============================================================ */
+
+
+.btn-primary {
+    display: inline-block;
+    background: var(--cyan);
+    color: var(--navy);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background: #0ab8d6;
+    transform: translateY(-2px); 
+}
+
+/* ============================================================
+   SHARED SECTION LABEL STYLES
+   
+   ============================================================ */
+
+.section-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.section-label-gold {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.section-label-dark {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ============================================================
+   HOME PAGE - TINY LEGENDS SECTION
+   
+   ============================================================ */
+
+.tiny-legends {
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 70px 80px;
+}
+
+/* ---- Image Slider ---- */
+.slider-wrapper {
+    position: relative;
+    flex: 1;
+    max-width: 420px;
+    min-width: 280px;
+}
+
+
+.slider {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Each individual slide */
+.slide {
+    display: none; 
+}
+
+.slide.active {
+    display: block; /
+}
+
+.slide img {
+    width: 100%;
+    height: 430px;             
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.35);
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    line-height: 1;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+
+.tiny-legends-text {
+    flex: 1;
+    color: var(--white);
+}
+
+.tiny-legends-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.section-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+   HOME PAGE - SANCTUARY SECTION
+   
+   ============================================================ */
+
+.sanctuary {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 70px 80px;
+    background: var(--white);
+}
+
+.sanctuary-text {
+    flex: 1;
+}
+
+.sanctuary-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.sanctuary-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.sanctuary-img-wrapper {
+    flex: 1;
+    max-width: 500px;
+}
+
+.sanctuary-img {
+    width: 100%;
+    height: 380px;             
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* ============================================================
+   HOME PAGE - PAST FRIENDS SECTION
+   
+   ============================================================ */
+
+.past-friends {
+    background: var(--navy);
+    padding: 70px 80px;
+    text-align: center;
+}
+
+.past-friends-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-bottom: 48px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.friend-card {
+    text-align: center;
+}
+
+.friend-card img {
+    width: 100%;
+    height: 190px;             
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.friend-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.friend-card p {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   ADOPT PAGE - INTRO TEXT
+   
+   ============================================================ */
+
+.adopt-intro {
+    background: var(--navy);
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.adopt-intro h2 {
+    font-family: 'Metamorphous', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 24px;
+    line-height: 1.35;
+}
+
+.adopt-intro p {
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.85;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   ADOPT PAGE 
+   
+   ============================================================ */
+
+.filter-bar {
+    background: var(--gold);
+    padding: 10px 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-bar span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+
+.filter-icon {
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+
+.filter-bar select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border: 1px solid var(--navy);
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* ============================================================
+   ADOPT PAGE - CREATURE CARDS
+   ============================================================ */
+
+
+.creatures-list {
+    list-style: none;
+}
+
+/* Each individual creature card row */
+.creature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 56px 100px;    
+}
+
+
+.creature-card:nth-child(odd) {
+    background: var(--white);
+}
+
+.creature-card:nth-child(even) {
+    background: var(--navy);
+}
+
+
+.creature-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;    
+    display: block;
+}
+
+
+.creature-info {
+    flex: 1;
+    padding-top: 8px;
+}
+
+.creature-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+.creature-card:nth-child(odd) .creature-name { color: var(--navy); }
+.creature-card:nth-child(even) .creature-name { color: var(--white); }
+
+
+.creature-stars {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+
+.creature-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+
+.price-original {
+    text-decoration: line-through;
+    color: #999;
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin-left: 12px;
+}
+
+
+.creature-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 16px;
+    border-radius: 20px;
+    background: rgba(21, 213, 245, 0.15);
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    margin-bottom: 16px;
+}
+
+
+.creature-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.creature-card:nth-child(odd) .creature-desc { color: #444; }
+.creature-card:nth-child(even) .creature-desc { color: rgba(255, 255, 255, 0.85); }
+
+
+.creature-divider {
+    border: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+    margin: 18px 0;
+}
+
+
+.creature-details {
+    font-size: 0.9rem;      
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.creature-card:nth-child(odd) .creature-details { color: #444; }
+.creature-card:nth-child(even) .creature-details { color: rgba(255, 255, 255, 0.8); }
+
+.creature-detail-row {
+    display: flex;
+    gap: 8px;
+}
+
+.detail-label {
+    font-weight: 700;       
+    min-width: 100px;
+}
+
+
+.creature-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--cyan);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.qty-btn {
+    background: var(--cyan);
+    color: var(--navy);
+    border: none;
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: #0ab8d6;
+}
+
+
+.qty-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    background: transparent;
+}
+
+.creature-card:nth-child(odd) .qty-input { color: var(--navy); }
+.creature-card:nth-child(even) .qty-input { color: var(--white); }
+
+/* "Add to Cradle" button */
+.btn-cradle {
+    background: var(--cyan);
+    color: var(--navy);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-cradle:hover {
+    background: #0ab8d6;
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   ADOPT PAGE 
+   ============================================================ */
+
+.view-cradle-btn {
+    position: fixed;     
+    bottom: 30px;
+    right: 30px;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 99;
+}
+
+.view-cradle-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   CONTACT PAGE - ABOUT SECTION
+   
+   ============================================================ */
+
+.contact-about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 70px 80px;
+    background: var(--white);
+}
+
+.contact-about-text {
+    flex: 1;
+}
+
+.contact-about-text .about-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-about-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;         
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.contact-about-text p {
+    font-size: 0.95rem;         
+    line-height: 1.85;
+    color: #444;
+}
+
+.contact-about-img {
+    flex: 1;
+    max-width: 420px;
+}
+
+.contact-about-img img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/* ============================================================
+   CONTACT PAGE - SOCIAL MEDIA + MAP + FORM SECTION
+   ============================================================ */
+
+.contact-bottom {
+    display: flex;
+    gap: 60px;
+    padding: 60px 80px;
+    background: var(--white);
+    align-items: stretch;   
+}
+
+/* Left column - social media and map */
+.contact-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Social media heading above the icons */
+.contact-social-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.contact-social-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 18px;
+}
+
+/* Row of social media icons */
+.social-icons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.social-icons a img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1); 
+}
+
+/* Map section */
+.contact-map-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.contact-map-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+}
+
+/* The map iframe (Google Maps embed) */
+.map-frame {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Right column - the message form */
+.contact-right {
+    flex: 1;
+    max-width: 500px;
+    display: flex;              
+    flex-direction: column;
+}
+
+
+.contact-form-card {
+    background: linear-gradient(135deg, #1a6b7a, #0d3d4a);
+    border-radius: 16px;
+    padding: 44px;
+    position: relative;
+    overflow: hidden;
+    flex: 1;                  
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;         
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 28px;
+    letter-spacing: 0.02em;
+}
+
+/* Each form field group  */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.form-group textarea {
+    resize: vertical;      
+    min-height: 100px;
+}
+
+/* Submit button */
+.btn-submit {
+    background: var(--cyan);
+    color: var(--navy);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 6px;
+}
+
+.btn-submit:hover {
+    background: #0ab8d6;
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   FOOTER 
+   ============================================================ */
+
+footer {
+    background: var(--white);
+    border-top: 1px solid #e0e0e0;
+    padding: 40px 80px 20px;
+}
+
+/* The main row inside the footer */
+.footer-inner {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Left section - logo and tagline */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+
+.footer-brand-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    height: 64px;               
+    width: 64px;
+    object-fit: contain;
+}
+
+.footer-brand-name {
+    font-family: 'MythologyOfEgypt', serif;
+    font-size: 1rem;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+.footer-tagline {
+    font-size: 0.82rem;
+    color: #555;
+    line-height: 1.6;
+    margin-left: 74px;          
+}
+
+/* Middle section - links */
+.footer-links {
+    flex: 1;
+    min-width: 140px;
+}
+
+.footer-links h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: #555;
+    transition: color 0.2s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--cyan);
+}
+
+/* Right section - social icons */
+.footer-social {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-social h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+/* Footer social icons row */
+.footer-social .social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Copyright bar at the very bottom */
+.footer-copy {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
+    font-size: 0.78rem;
+    color: #888;
+    text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVE - MOBILE ADJUSTMENTS
+   (when screen width is 768px or smaller)
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    /* Stack navbar items vertically on small screens */
+    .navbar {
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+        border-radius: 30px;
+    }
+
+    header {
+        padding: 10px 12px;
+    }
+
+    .nav-right {
+        display: none; 
+    }
+
+    /* Stack hero text differently on small screens */
+    .hero-text {
+        right: 20px;
+        bottom: 24px;
+    }
+
+    .hero-title { font-size: 2.2rem; }
+
+    /* Make footer logo row stack on small screens */
+    .footer-brand-row {
+        flex-wrap: wrap;
+    }
+
+    .footer-tagline {
+        margin-left: 0;
+    }
+
+    /* Stack the two-column sections into one column */
+    .tiny-legends,
+    .sanctuary,
+    .contact-about,
+    .contact-bottom {
+        flex-direction: column;
+        padding: 40px 24px;
+    }
+
+    .sanctuary-img-wrapper,
+    .contact-about-img,
+    .contact-right {
+        max-width: 100%;
+    }
+
+    /* Stack creature cards on mobile */
+    .creature-card {
+        flex-direction: column;
+        padding: 30px 24px;
+    }
+
+    .creature-img {
+        width: 100%;
+        height: 240px;
+    }
+
+    /* 2 columns instead of 4 for the past friends grid */
+    .friends-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Filter bar wraps on small screens */
+    .filter-bar {
+        padding: 10px 24px;
+    }
+
+    .past-friends,
+    .adopt-intro {
+        padding: 40px 24px;
+    }
+
+    footer { padding: 30px 24px 16px; }
+
+    .footer-inner { gap: 30px; }
+}

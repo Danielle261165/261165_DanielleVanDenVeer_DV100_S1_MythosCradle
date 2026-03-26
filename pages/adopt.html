@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt - The Mythos Cradle</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Google Fonts ------------------------------------------------------------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION BAR ================================================================= -->
+    <header>
+        <nav class="navbar">
+
+            <!-- Logo ------------------------------------------------------------>
+            <a href="../index.html" class="logo">
+                <img src="../assets/img/logo.png" alt="The Mythos Cradle Logo" class="logo-img">
+                <span class="logo-text">The Mythos Cradle</span>
+            </a>
+
+            <!-- Main navigation links ------------------------------------------------------>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+            
+                <li><a href="adopt.html" class="active">Adopt</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <div class="cart-icon">
+                   
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002d68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ==================== HERO SECTION ======================================================= -->
+    <section class="hero-sub">
+        <img src="../assets/img/adoptHeader.png" alt="Adopt A Creature banner">
+        <h1 class="hero-sub-title">Adopt A Creature</h1>
+    </section>
+
+
+    <!-- ==================== ADOPT INTRO TEXT ====================================================== -->
+    <section class="adopt-intro">
+        <h2>Your journey with a little legend begins here.</h2>
+        <p>
+            Adopting a little legend doesn't cost a thing — our focus is finding loving homes. To make their arrival
+            extra special, you can choose optional starter packages made just for your creature: tiny beds, treats, toys,
+            and more. You can even get multiple packages if your legend will have indoor and outdoor spaces. After you
+            complete your application, we'll arrange a magical meeting so you can see which creature is the perfect fit.
+            We've also included a beginners friendly rating with our creatures so that you can gauge if you are ready to
+            make them a part of your family.
+        </p>
+    </section>
+
+
+    <!-- ==================== FILTER BAR ================================================================-->
+    <div class="filter-bar">
+        <span>&#9776; Filter</span>
+        <span>Showing 1&ndash;16 of 32 results</span>
+        <span>Show</span>
+        <select name="show" aria-label="Show per page">
+            <option>6</option>
+            <option>12</option>
+            <option>24</option>
+        </select>
+        <span>Sort by</span>
+        <select name="sort" aria-label="Sort by">
+            <option>Default</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+        </select>
+    </div>
+
+
+    <!-- ==================== CREATURE CARDS LIST ================================================================-->
+    <ul class="creatures-list">
+
+
+        <!-- ===== CARD 1: Blue Dragon ====================== ================================== -->
+        <li class="creature-card">
+
+            <img
+                src="../assets/img/adopt1.png"
+                alt="Azuron the Blue Dragon"
+                class="creature-img"
+            >
+
+            <div class="creature-info">
+                <h2 class="creature-name">Blue Dragon &ndash; Azuron</h2>
+
+                <!-- Star rating -->
+                <div class="creature-stars">&#9733;&#9733;&#9733;</div>
+
+                <!-- Pricing: sale price + original crossed ou----------------------------------------- -->
+                <p class="creature-price">
+                    R 2 500.00
+                    <span class="price-original">R 5 000.00</span>
+                </p>
+
+                <!--Badge ------------------------------------------------------------------->
+                <span class="creature-badge">Friendly Ally</span>
+
+                <!-- Description -------------------------------------------------------------------------->
+                <p class="creature-desc">
+                    Azuron is a curious little dragon with a spark of mischief in his eyes. He loves exploring hidden nooks
+                    and curling up in warm spots after a playful flight, leaving tiny trails of blue sparks wherever he goes.
+                    He thrives on attention and gentle play, and his favourite games involve chasing floating spark orbs around
+                    the room.
+                </p>
+
+                <hr class="creature-divider">
+
+                
+                <div class="creature-details">
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Bed</span>
+                        <span>: &nbsp; Cozy lava-foam bed</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Treats</span>
+                        <span>: &nbsp; Frostberry treats</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Toys</span>
+                        <span>: &nbsp; Flame-safe balls, Wing-wrangling hoops, Tiny treasure chests</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Unique Item</span>
+                        <span>: &nbsp; Mini Fire Orb</span>
+                    </div>
+                </div>
+
+                
+                <div class="creature-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">&#8722;</button>
+                        <input type="number" class="qty-input" value="1" min="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">&#43;</button>
+                    </div>
+                    <button class="btn-cradle" onclick="addToCradle(this, 'Blue Dragon – Azuron', 2500)">
+                        Add to Cradle
+                    </button>
+                </div>
+            </div>
+
+        </li>
+
+
+        <!-- ===== CARD 2: Kitsune – Yuki ========================================================= ===== -->
+        <li class="creature-card">
+
+            <img
+                src="../assets/img/adopt2.png"
+                alt="Yuki the Kitsune"
+                class="creature-img"
+            >
+
+            <div class="creature-info">
+                <h2 class="creature-name">Kitsune &ndash; Yuki</h2>
+
+                <div class="creature-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+                <p class="creature-price">R 4 500.00</p>
+
+                <span class="creature-badge">Gentle Guardian</span>
+
+                <p class="creature-desc">
+                    Yuki is a mischievous yet loving fox spirit, full of curiosity and clever ideas. She delights in playful
+                    tricks and quietly watching over her friends, her tails swishing with contentment. Yuki especially enjoys
+                    interactive games and hiding small trinkets to surprise her caretakers.
+                </p>
+
+                <hr class="creature-divider">
+
+                <div class="creature-details">
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Bed</span>
+                        <span>: &nbsp; Silk-lined den bed</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Treats</span>
+                        <span>: &nbsp; Moonfruit snacks</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Toys</span>
+                        <span>: &nbsp; Puzzle cubes, Jingling bells, Magical ribbons</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Unique Item</span>
+                        <span>: &nbsp; Mini Spirit Lantern</span>
+                    </div>
+                </div>
+
+                <div class="creature-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">&#8722;</button>
+                        <input type="number" class="qty-input" value="1" min="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">&#43;</button>
+                    </div>
+                    <button class="btn-cradle" onclick="addToCradle(this, 'Kitsune – Yuki', 4500)">
+                        Add to Cradle
+                    </button>
+                </div>
+            </div>
+
+        </li>
+
+
+        <!-- ===== CARD 3: Griffin – Aurelia ================================================ ===== -->
+        <li class="creature-card">
+
+            <img
+                src="../assets/img/adopt3.png"
+                alt="Aurelia the Griffin"
+                class="creature-img"
+            >
+
+            <div class="creature-info">
+                <h2 class="creature-name">Griffin &ndash; Aurelia</h2>
+
+                <div class="creature-stars">&#9733;&#9733;&#9733;</div>
+
+                <p class="creature-price">R 6 500.00</p>
+
+                <span class="creature-badge">Friendly Ally</span>
+
+                <p class="creature-desc">
+                    Aurelia is a proud little griffin, courageous yet gentle. She loves climbing, exploring high perches,
+                    and curling up near those she trusts, always watching the world with wise golden eyes. She adores gentle
+                    games of chase and loves to show off her tiny but majestic wings.
+                </p>
+
+                <hr class="creature-divider">
+
+                <div class="creature-details">
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Bed</span>
+                        <span>: &nbsp; Feather-lined perch bed</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Treats</span>
+                        <span>: &nbsp; Sunfruit treats</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Toys</span>
+                        <span>: &nbsp; Wing rings, Soft talon toys, Mini prey plushies</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Unique Item</span>
+                        <span>: &nbsp; Tiny Sunstone Perch</span>
+                    </div>
+                </div>
+
+                <div class="creature-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">&#8722;</button>
+                        <input type="number" class="qty-input" value="1" min="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">&#43;</button>
+                    </div>
+                    <button class="btn-cradle" onclick="addToCradle(this, 'Griffin – Aurelia', 6500)">
+                        Add to Cradle
+                    </button>
+                </div>
+            </div>
+
+        </li>
+
+
+        <!-- ===== CARD 4: Water Wisp – Lumina ============================================================ -->
+        <li class="creature-card">
+
+            <img
+                src="../assets/img/adopt4.png"
+                alt="Lumina the Water Wisp"
+                class="creature-img"
+            >
+
+            <div class="creature-info">
+                <h2 class="creature-name">Water Wisp &ndash; Lumina</h2>
+
+                <div class="creature-stars">&#9733;&#9733;&#9733;&#9733;</div>
+
+                <p class="creature-price">R 40 000.00</p>
+
+                <span class="creature-badge">Beloved Companion</span>
+
+                <p class="creature-desc">
+                    Lumina drifts like a shimmer of moonlight, soft and gentle. Playful and curious, she glides through her
+                    surroundings, bringing calm and quiet magic wherever she goes. She loves to follow gentle ripples in water
+                    or light games, leaving a faint glowing trail that enchants everyone nearby.
+                </p>
+
+                <hr class="creature-divider">
+
+                <div class="creature-details">
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Bed</span>
+                        <span>: &nbsp; Crystal bowl bed</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Treats</span>
+                        <span>: &nbsp; Dewdrop nectar</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Toys</span>
+                        <span>: &nbsp; Floating orbs, Ripple rings, Water bell</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Unique Item</span>
+                        <span>: &nbsp; Mini Waterfall Sphere</span>
+                    </div>
+                </div>
+
+                <div class="creature-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">&#8722;</button>
+                        <input type="number" class="qty-input" value="1" min="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">&#43;</button>
+                    </div>
+                    <button class="btn-cradle" onclick="addToCradle(this, 'Water Wisp – Lumina', 40000)">
+                        Add to Cradle
+                    </button>
+                </div>
+            </div>
+
+        </li>
+
+
+        <!-- ===== CARD 5: Pegasus – Starwind ========================================================== ===== -->
+        <li class="creature-card">
+
+            <img
+                src="../assets/img/adopt5.png"
+                alt="Starwind the Pegasus"
+                class="creature-img"
+            >
+
+            <div class="creature-info">
+                <h2 class="creature-name">Pegasus &ndash; Starwind</h2>
+
+                <div class="creature-stars">&#9733;&#9733;&#9733;&#9733;</div>
+
+                <p class="creature-price">R 5 000.00</p>
+
+                <span class="creature-badge">Gentle Guardian</span>
+
+                <p class="creature-desc">
+                    Starwind is a gentle, curious Pegasus foal with a playful spirit. He loves short flights and sunny naps,
+                    his gleaming wings always ready for discovery. He enjoys small games of chase and nuzzles to show
+                    affection, quickly forming strong bonds with those he trusts.
+                </p>
+
+                <hr class="creature-divider">
+
+                <div class="creature-details">
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Bed</span>
+                        <span>: &nbsp; Soft cloud bed</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Treats</span>
+                        <span>: &nbsp; Starhay treats</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Toys</span>
+                        <span>: &nbsp; Flying hoops, Feathered balls, Small riding saddle</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Unique Item</span>
+                        <span>: &nbsp; Mini Wind Hoof Ball</span>
+                    </div>
+                </div>
+
+                <div class="creature-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">&#8722;</button>
+                        <input type="number" class="qty-input" value="1" min="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">&#43;</button>
+                    </div>
+                    <button class="btn-cradle" onclick="addToCradle(this, 'Pegasus – Starwind', 5000)">
+                        Add to Cradle
+                    </button>
+                </div>
+            </div>
+
+        </li>
+
+
+        <!-- ===== CARD 6: Forest Spirit – Briar ================================================ -->
+        <li class="creature-card">
+
+            <img
+                src="../assets/img/adopt6.png"
+                alt="Briar the Forest Spirit"
+                class="creature-img"
+            >
+
+            <div class="creature-info">
+                <h2 class="creature-name">Forest Spirit &ndash; Briar</h2>
+
+                <div class="creature-stars">&#9733;&#9733;&#9733;&#9733;</div>
+
+                <p class="creature-price">R 3 500.00</p>
+
+                <span class="creature-badge">Beloved Companion</span>
+
+                <p class="creature-desc">
+                    Briar is a tiny guardian of the woods, curious, gentle, and full of life. He loves leafy hideaways and
+                    quietly exploring gardens, always humming with a touch of magic. He enjoys collecting small natural
+                    treasures and bringing them to his caretakers as gifts, showing his playful personality.
+                </p>
+
+                <hr class="creature-divider">
+
+                <div class="creature-details">
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Bed</span>
+                        <span>: &nbsp; Mossy bed</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Treats</span>
+                        <span>: &nbsp; Berry treats</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Toys</span>
+                        <span>: &nbsp; Twig rattles, Leaf dolls, Acorn balls</span>
+                    </div>
+                    <div class="creature-detail-row">
+                        <span class="detail-label">Unique Item</span>
+                        <span>: &nbsp; Mini Leafy Hideout</span>
+                    </div>
+                </div>
+
+                <div class="creature-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">&#8722;</button>
+                        <input type="number" class="qty-input" value="1" min="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">&#43;</button>
+                    </div>
+                    <button class="btn-cradle" onclick="addToCradle(this, 'Forest Spirit – Briar', 3500)">
+                        Add to Cradle
+                    </button>
+                </div>
+            </div>
+
+        </li>
+
+
+    </ul>
+
+
+    <!-- ==================== VIEW CRADLE FLOATING BUTTON ==================================================-->
+    <button class="view-cradle-btn" onclick="viewCradle()">View Cradle</button>
+
+
+    <!-- ==================== FOOTER ========================================================================= -->
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <div class="footer-brand-row">
+                    <img src="../assets/img/logo.png" alt="Logo" class="footer-logo">
+                    <span class="footer-brand-name">The Mythos Cradle</span>
+                </div>
+                <p class="footer-tagline">Where every legendary creature<br>finds a loving home.+</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+             </div>
+
+            <div class="footer-social">
+                <h4>Social Media Links</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/theopenwindow/"><img src="../assets/img/sm1.png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@open_window_"><img src="../assets/img/sm2.png" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/openwindowinstitute/"><img src="../assets/img/sm3.png" alt="Instagram"></a>
+                    <a href="https://x.com/open_window_"><img src="../assets/img/sm4.png" alt="X / Twitter"></a>
+                </div>
+            </div>
+
+        </div>
+        <p class="footer-copy">
+            All Rights Reserved @ Open Window 2024 &nbsp;&nbsp; Terms &amp; Conditions &nbsp;&nbsp; Privacy &amp; Policy
+        </p>
+    </footer>
+
+
+    
+</body>
+</html>

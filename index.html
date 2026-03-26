@@ -2,17 +2,220 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge>"
-    <meta name="viewport" content="width-device-width, initial-scale-1.0"
-    <meta name="keywords" content="template, initial setup, html, css, link, futureUse"
-    <meta name="author" content="Name Surname Student Number"
-
-<title>HTML Template</title>
-
-<link rel="stylesheet" href="css/main.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mythos Cradle - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ==================== NAVIGATION BAR ==============================================================================-->
+    <header>
+        <nav class="navbar">
+
+            <!-- Logo-------------------------------------------------------------------------------------------------->
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="The Mythos Cradle Logo" class="logo-img">
+                <span class="logo-text">The Mythos Cradle</span>
+            </a>
+
+            <!-- Navigation links--------------------------------------------------------------------------------------->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/adopt.html">Adopt</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Right side----------------------------------------------------------------------------------- -->
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+
+                <!-- The cart icon(2) -------------------------------------------------------------------------------->
+                <div class="cart-icon">
+                    
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002d68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    
+                    <span class="cart-badge" id="cart-count">2</span>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ==================== HERO SECTION ===================================================================== -->
+    <section class="hero">
+        <img src="assets/img/homeHeader.png" alt="A majestic dragon sitting proudly" class="hero-img">
+        <div class="hero-text">
+            <h1 class="hero-title">The Mythos<br>Cradle</h1>
+            <p class="hero-tagline">Where legends become loved ones</p>
+        </div>
+    </section>
+
+
+    <!-- ==================== TINY LEGENDS SECTION ================================================================= -->
+    
+        <section class="tiny-legends">
+
+        <!-- LEFT SIDE----------------------------------------------------------------------------------- -->
+        <div class="slider-wrapper">
+
+            <button class="slider-btn prev-btn">&#8249;</button>
+
+            <div class="slider">
+             <div class="slide active">
+                    <img src="assets/img/imageSlider1.png" alt="A glowing magical creature">
+                </div>
+            </div>
+
+            <button class="slider-btn next-btn" >&#8250;</button>
+
+        </div>
+
+
+        
+
+        <!-- RIGHT SIDE: ---------------------------------------------------------------------------------- -->
+        <div class="tiny-legends-text">
+            <span class="section-label">BEGIN YOUR JOURNEY</span>
+            <h2>Tiny Legends<br>Big Hearts</h2>
+            <p class="section-desc">
+                Begin your journey into legend: tiny dragons, shimmering pegasi, mischievous kitsune,
+                and watchful basilisks are ready to meet their families. Delight in enchanted encounters,
+                gentle care, and joyful playtime. Heartwarming bonds await as these legendary creatures
+                find their forever homes.
+            </p>
+         <a href="pages/adopt.html" class="btn-primary">Cradle a Legend</a>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== SANCTUARY SECTION ====================================================================== -->
+    <section class="sanctuary">
+
+        <!-- LEFT----------------------------------------------------------------------------------------------->
+        <div class="sanctuary-text">
+            <span class="section-label-dark">THE CRADLE</span>
+            <h2 class="sanctuary-heading">A Sanctuary Where Mythical<br>Creatures Find Families</h2>
+            <p class="sanctuary-desc">
+                Discover our carefully nurtured mythical creatures, each ready to join a loving family.
+                Experience the joy and wonder of forming a lasting bond, as every adoption is guided
+                with care, ensuring a safe, ethical, and heartwarming journey for both creature and caretaker.
+            </p>
+        </div>
+
+        <!-- RIGHT- Creature image ------------------------------------------------------------------------>
+        <div class="sanctuary-img-wrapper">
+            <img src="assets/img/homeImg1.png" alt="A beautiful mythical creature" class="sanctuary-img">
+        </div>
+
+    </section>
+
+
+    <!-- ==================== PAST FRIENDS SECTION ============================================================= -->
+    <section class="past-friends">
+
+        <span class="section-label">LOOKING IN ON PAST FRIENDS</span>
+        <h2 class="past-friends-heading">From Cradle to Family: A<br>Legend at Home</h2>
+
+        <!-- The grid of 4 cards---------------------------------------------------------------------- -->
+        <div class="friends-grid">
+
+            <!-- Card 1: Percy ------------------------------------------------------------------------->
+            <div class="friend-card">
+                <img src="assets/img/successImg1.png" alt="Percy the snow creature">
+                <h3>Percy's Quiet Winter Days</h3>
+                <p>Once shy in the cold, Percy now explores snowy peaks wrapped in warmth, curiosity, and family love.</p>
+            </div>
+
+            <!-- Card 2: Ripple -------------------------------------------------------------------->
+            <div class="friend-card">
+                <img src="assets/img/successImg2.png" alt="Ripple the water creature">
+                <h3>Ripple's Gentle River Home</h3>
+                <p>Gentle Ripple has found peace along flowing waters, bonded closely with a family who treasures calm and care.</p>
+            </div>
+
+            <!-- Card 3: Atlas ----------------------------------------------------------------------->
+            <div class="friend-card">
+                <img src="assets/img/successImg3.png" alt="Atlas the brave creature">
+                <h3>Atlas Learns to Trust</h3>
+                <p>Brave little Atlas grows stronger each day, learning trust and courage in a home filled with patience.</p>
+            </div>
+
+            <!-- Card 4: Skye --------------------------------------------------------------------------------->
+            <div class="friend-card">
+                <img src="assets/img/successImg4.png" alt="Skye the winged creature">
+                <h3>Skye's First Open Skies</h3>
+                <p>Skye's wings stretch freely at last, soaring happily above a home where wonder is always welcome.</p>
+            </div>
+
+        </div>
+
+        <!-- Button ----------------------------------------------------------------------------------------->
+        <a href="pages/adopt.html" class="btn-primary">Cradle a Legend</a>
+
+    </section>
+
+
+    <!-- ==================== FOOTER ============================================================================= -->
+    <footer>
+        <div class="footer-inner">
+
+
+            <div class="footer-brand">
+                
+                <div class="footer-brand-row">
+                    <img src="assets/img/logo.png" alt="The Mythos Cradle Logo" class="footer-logo">
+                    <span class="footer-brand-name">The Mythos Cradle</span>
+                </div>
+                <p class="footer-tagline">Where every legendary creature<br>finds a loving home.+</p>
+            </div>
+
+           
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/adopt.html">Adopt</a></li>
+                    <li><a href="pages/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-social">
+                <h4>Social Media Links</h4>
+                <div class="social-icons">
+                   
+                     <a href="https://www.facebook.com/theopenwindow/"><img src="../assets/img/sm1.png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@open_window_"><img src="../assets/img/sm2.png" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/openwindowinstitute/"><img src="../assets/img/sm3.png" alt="Instagram"></a>
+                    <a href="https://x.com/open_window_"><img src="../assets/img/sm4.png" alt="X / Twitter"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright ------------------------------------------------------------------------------------------------->
+        <p class="footer-copy">
+            All Rights Reserved @ Open Window 2024 &nbsp;&nbsp; Terms &amp; Conditions &nbsp;&nbsp; Privacy &amp; Policy
+        </p>
+    </footer>
+
+
+    
+    
 
 </body>
 </html>
